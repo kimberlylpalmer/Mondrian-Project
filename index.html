@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 20px solid black;
+      animation: blink-border 2s infinite;
+      width: 800px;
+      height: 800px;
+    }
+
+    @keyframes blink-border {
+      0%, 100% {
+        border-color: #232629;
+      }
+      25% {
+        border-color: #F9D01E;
+      }
+      50% {
+        border-color: #E72F24;
+      }
+      75% {
+        border-color: #004592;
+      }
+    }
+
+    .picture {
+      display: grid;
+      /* border: 15px groove black; */
+      width: 748px;
+      height: 748px;
+      grid-template-columns: 320px 198px 153px 50px;
+      grid-template-rows: 414px 130px 155px 20px;
+      gap: 9px;
+      background-color: #232629;
+      font-family: sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .red {
+      background-color: #E72F24;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .white {
+      background-color: #F0F1EC;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+    }
+    
+    .one {
+      grid-column: span 3;
+    }
+        
+    .two {
+      grid-row: span 2;
+    }
+
+    .three {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    .blue {
+      background-color: #004592;
+      border-bottom: 10px solid black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .four {
+      grid-row: span 2;
+      height: 186px;
+    }
+
+    .five {
+      grid-column: span 1;
+      height: 22px;
+    }
+
+    .yellow {
+      background-color: #F9D01E;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      height: 22px;
+    }
+
+    .black {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Write your HTML here -->
+   <div class="container">
+    <div class="picture">
+      <div class="red">Red</div>
+      <div class="white one">One</div>
+      <div class="white two">Two</div>
+      <div class="white three">Three</div>
+      <div class="blue">Blue</div>
+      <div class="white four">Four</div>
+      <div class="white five">Five</div>
+      <div class="yellow">Yellow</div>
+      <div class="black">Black</div>
+    </div>
+   </div>
+</body>
+
+</html>
